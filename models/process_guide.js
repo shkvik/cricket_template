@@ -1,5 +1,5 @@
 const {Sequelize} = require("sequelize");
-const database = require("../services/database");
+const database = require('../services/database');
 const register = require('./process_register');
 
 

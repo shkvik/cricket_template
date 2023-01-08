@@ -1,51 +1,97 @@
-.body {
-    top:-16px;
-    width: 1210px;
-    margin-right: auto;
+@font-face
+{
+    font-family: 'Russo-one';
+    src: url(/fonts/RussoOne-Regular.ttf);
+}
+
+body
+{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+body .content
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+nav ul
+{
+    display: inline-block;
+    justify-content: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: rgb(248, 248, 248);
+    box-shadow:3px 3px 3px rgb(221, 221, 221);
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    min-height: 400px;
+    position: sticky;
+}
+
+.page
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+body .content .title
+{
+    word-break: break-word;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 60px;
+    color: rgb(56, 87, 35);
+    font-family: 'Russo-one';
+    font-weight: 1000;
+}
+
+
+.container
+{
+    box-shadow:3px 3px 3px rgb(221, 221, 221);
+    background-color: rgb(248, 248, 248);
+    border-radius: 16px;
+    margin: 35px;
+    width: 800px;
+    height: 400px;
+}
+
+.container_title
+{
+    font-family: 'Russo-one';
+    font-size: 15px;
+    color: rgb(252, 100, 30);
+    border-bottom: 1px solid rgb(190, 190, 190);
+    padding: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+footer
+{
+    display: flex;
+    justify-content: center;
+}
+
+.menu_item
+{
+    color: rgb(62, 62, 62);
+    font-family: 'Russo-one';
+}
+
+.logo_image
+{
+    margin: 10px;
+    width: 80%;
+    display: block;
     margin-left: auto;
-    position: relative;
-    z-index: 1;
-    min-height: max(1950px, 100%);
-    height: 2249.99px;
-    background: none rgb(255, 255, 255);
-}
-
-.menu {
     margin-right: auto;
-    width: initial;
-    min-width: 256px;
-    min-height: 800px;
-    inset: 0px;
-    max-width: 256px;
-    height: initial;
-    max-height: 800px;
-    position: absolute;
-    z-index: 1503;
-    background-color: rgb(247, 247, 247);
-    border-radius: 0px;
-    box-shadow: rgb(0 0 0 / 10%) 4px 0px 4px 0px;
-}
-
-.content {
-    z-index: 2;
-    top: -8px;
-    left: 256px;
-    width: 1022px;
-    height: 1811px;
-    overflow: visible;
-    border-radius: 0px;
-    position: absolute;
-}
-
-
-.container {
-    z-index: 0;
-    left: 19px;
-    width: 956px;
-    height: 475px;
-    overflow: visible;
-    background-color: rgb(247, 247, 247);
-    border-radius: 39px;
-    box-shadow: rgb(0 0 0 / 10%) 4px 4px 4px 0px;
-    position: absolute;
 }

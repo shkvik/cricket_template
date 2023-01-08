@@ -3,12 +3,6 @@ const handlebars = require('express-handlebars');
 const hbs = require('hbs');
 const welcome = require("./services/database");
 
-// const { singleton } = require("./services/database/singleton.js")
-
-
-// singleton.User.findAll({raw:true}).then(users=>{
-//   console.log(users);
-// }).catch(err=>console.log(err));
 
 const app = express();
 const userRouter = require("./routes/userRouter.js");
