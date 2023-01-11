@@ -1,0 +1,21 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    //Тут располагаем инофрмацию для графиков
+    var values = new Array();
+
+    {{#each this.Arr}}
+        values.push("{{this}}");
+    {{/each}}
+    
+</script>
+
+<script type="module" src="javascript/dashboard.js"></script>
+
+<div class="content">
+
+    <div class="title"> {{this.Title}} </div>
+
+    <div class="container"> <canvas id="myChart"></canvas> </div>
+
+</div>

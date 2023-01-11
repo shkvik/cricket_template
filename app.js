@@ -5,8 +5,10 @@ const welcome = require("./services/database");
 
 
 const app = express();
-const userRouter = require("./routes/userRouter.js");
-const homeRouter = require("./routes/homeRouter.js");
+
+const userRouter      = require("./routes/userRouter.js");
+const homeRouter      = require("./routes/homeRouter.js");
+const dashboardRouter = require("./routes/dashboardRouter.js");
 
 
 
@@ -22,7 +24,8 @@ app.engine(
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + "/public"));
- 
+
+app.use("/dashboard", dashboardRouter);
 app.use("/users", userRouter);
 app.use("/", homeRouter);
  
@@ -30,8 +33,8 @@ app.use(function (req, res, next) {
     res.status(404).send("Not Found");
 });
  
-app.listen(3000, ()=> { console.log("Сервер запущен и ожидает подключения...") });
+app.listen(3030, ()=> { console.log("Сервер запущен и ожидает подключения...") });
 
 
 var ip = require("ip");
-console.log(`main url: http://${ip.address()}:3000`);
+console.log(`main url: http://${ip.address()}:3030`);

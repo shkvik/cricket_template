@@ -15,6 +15,7 @@ body .content
 {
     display: flex;
     flex-direction: column;
+    min-width: 70%;
 }
 
 
@@ -83,8 +84,24 @@ footer
 
 .menu_item
 {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
     color: rgb(62, 62, 62);
     font-family: 'Russo-one';
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    margin: 10%;
+    filter: brightness(0%);
+    padding-left: 5%;
+}
+
+.menu_divider
+{
+    display: block;
+    height: 50px;
+    padding-top: 30%;
 }
 
 .logo_image
@@ -94,4 +111,19 @@ footer
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 10%;
+    padding-top: 6%;
+}
+
+.menu_item .menu_item_image
+{
+    width: 10%;
+    display: block;
+    margin-right: 5%;
+}
+
+.menu_item:hover
+{
+    filter: none;
+    color: #FC641E;
 }
