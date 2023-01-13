@@ -1,11 +1,11 @@
-const Dashboard = require("../models/dashboard.js");
+const DashboardModel = require("../models/dashboardModel.js");
 
 
 exports.index = function (request, response){
 
-    var dashboard = new Dashboard();
+    var dashboard = new DashboardModel();
 
-    response.render("../views/dashboard.hbs", 
+    response.render("../views/dashboardView.hbs", 
     {
         Title: dashboard.Title,
         Temperature: 

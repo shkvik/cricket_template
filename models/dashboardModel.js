@@ -1,5 +1,6 @@
 module.exports = 
-class DashboardIndex {
+
+class DashboardModel {
     Title = "Dashboard";  
     constructor(){
          

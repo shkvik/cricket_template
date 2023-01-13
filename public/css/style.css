@@ -168,8 +168,85 @@ footer
 {
     width: 300px;
     padding-left: 10%;
-    font-size: 20px;
+    font-size: 14px;
     padding-top: 10%;
     color: rgb(56, 87, 35);
     font-family: 'Russo-one';
+}
+
+.dashboard_meta_data_header_container
+{
+    color: rgb(56, 87, 35);
+    font-size: 14px;
+    font-family: 'Russo-one';
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard_meta_data_header_container .moon_link
+{
+    padding-top: 5%;
+    text-align: center;
+    
+}
+
+.dashboard_meta_data_header_container .moon_link .moon_title
+{
+    color: rgb(56, 87, 35);
+    text-decoration: none;
+}
+
+.dashboard_meta_data_header_container .moon_link .moon_title:hover
+{
+    color: #FC641E;
+}
+
+.dashboard_notifications
+{
+    height: 50%;
+    width: 100%;
+    border-radius: 30px;
+    background-color: rgb(248, 248, 248);
+    box-shadow:3px 3px 3px rgb(221, 221, 221);
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.dashboard_notifications_title
+{
+    border-bottom: solid 1px;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 16px;
+    color: rgb(56, 87, 35);
+    font-family: 'Russo-one';
+}
+
+
+.dashboard_notifications_checkboxs
+{
+    color: rgb(56, 87, 35);
+    font-family: 'Russo-one';
+    font-weight: lighter;
+    font-size: 14px;
+    display: inline;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.dashboard_notifications_checkbox
+{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+}
+
+.dashboard_notifications_checkbox .date
+{
+    color: #FC641E;
+    margin-left: auto;
+    margin-right: 10%;
 }

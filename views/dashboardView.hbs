@@ -1,0 +1,116 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    //Тут располагаем инофрмацию для графиков температуры
+    var temperature_mounths = new Array();
+    var temperature_values  = new Array();
+
+    {{#each this.Temperature}}
+        temperature_mounths.push("{{this.mounth}}");
+        temperature_values.push("{{this.value}}");
+    {{/each}}
+    
+    //Тут располагаем инофрмацию для графиков влажности
+    var Humidity_values = new Array();
+    var humidity_hours = new Array();
+
+    {{#each this.Humidity}}
+        humidity_hours.push("{{this.hour}}");
+        Humidity_values.push("{{this.value}}");
+    {{/each}}
+
+</script>
+
+<script type="module" src="javascript/dashboard.js"></script>
+
+<div class="content">
+
+    <div class="dash_board_container">
+        <div class="layout_charts">
+            <div>
+                <div class="chart_title"> Temperature ℃ </div>
+                <canvas class="chart" id="myChart"></canvas>
+            </div>
+
+            <div>
+                <div class="chart_title"> Humidity % </div>
+                <canvas class="chart" id="myChart2"></canvas>
+            </div>
+
+            <div>
+                <div class="chart_title"> FCR </div>
+                <canvas class="chart" id="myChart3"></canvas>
+            </div>
+            
+        </div>
+
+        <div class="dashboard_meta_coontainer">
+
+            <div class="dashboard_meta_data_header_container">
+                <div>
+                    <div class="dashboard_meta_data">
+                        <div> Surface pressure: 1016.1 hPa  </div>
+                    </div>
+                
+                    <div class="dashboard_meta_data">
+                        <div> Facility lighting: 312 lux  </div>
+                    </div>
+
+                    <div class="dashboard_meta_data">
+                        <div> Feed amount in stock: 138kg  </div>
+                    </div>
+                </div>
+                <div class="moon_link">
+                    <a href="https://moonphase.guide/" class="moon_title">
+                        <img src="img/moon.png"/>
+                        <div>Moon phase</div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="dashboard_notifications">
+                <div class="dashboard_notifications_title"> Notifications </div>
+
+                <div class="dashboard_notifications_checkboxs"> 
+                    <div class="dashboard_notifications_checkbox">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label class="dashboard_notifications_item" for="vehicle1">
+                             Colony 8, Add Feed
+                        </label>
+                        <div class="date"> 23.01.23 </div>
+                    </div>
+                    
+                    <div class="dashboard_notifications_checkbox">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label class="dashboard_notifications_item" for="vehicle1">
+                             Colony 8, Harvest protein
+                        </label>
+                        <div class="date"> 23.01.23 </div>
+                    </div>
+
+                    <div class="dashboard_notifications_checkbox">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label class="dashboard_notifications_item" for="vehicle1">
+                             Colony 7, Feed colony
+                        </label>
+                        <div class="date"> 23.01.23 </div>
+                    </div>
+
+                    <div class="dashboard_notifications_checkbox">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label class="dashboard_notifications_item" for="vehicle1">
+                             Colony 1, Check the colony
+                        </label>
+                        <div class="date"> 23.01.23 </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
