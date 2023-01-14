@@ -83,6 +83,11 @@ const register_process = database.provider.sequelize.define("process_register",
    DayCounter: {
         type: Sequelize.DATE,
         allowNull: false,
+   },
+   ColoniesId:
+   {
+        type: Sequelize.INTEGER,
+        allowNull: false,
    }
 },
 {

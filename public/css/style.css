@@ -250,3 +250,61 @@ footer
     margin-left: auto;
     margin-right: 10%;
 }
+
+.colony_cart_container
+{
+    margin: 5%;
+    min-height: 200px;
+    min-width: 500px;
+    border-radius: 15px;
+    background-color: rgb(248, 248, 248);
+    box-shadow:3px 3px 3px rgb(221, 221, 221);
+}
+
+.colony_cart_container_title
+{
+    margin: 2%;
+    color: #FC641E;
+    font-family: 'Russo-one';
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.535);
+}
+
+.colony_cart_grid-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: max-content;
+    margin: 5%;
+}
+
+.colony_cart_string
+{
+    margin: 2%;
+    color: #0000009e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    max-width: max-content;
+}
+
+.colony_cart_string_key
+{
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: left;
+}
+
+.colony_cart_string_value
+{   
+    margin-left: 4%;
+}
+
+.colony_textarea
+{
+    margin-left: 4%;
+    margin-right: 4%;
+    border-radius: 10px;
+    width: 92%;
+    height: 50%;
+    resize: none;
+    border: none;
+}
