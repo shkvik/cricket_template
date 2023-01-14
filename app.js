@@ -42,10 +42,7 @@ app.get('/api/users', function(req, res) {
 
 app.use("/production", productionRouter);
 app.use("/reproduction", reproductionRouter);
-
 app.use('/colonyCart', colonyCartRouter);
-
-
 app.use("/nursery", nurseryRouter);
 app.use("/rearing", rearingRouter);
 app.use("/dashboard", dashboardRouter);

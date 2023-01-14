@@ -15,6 +15,7 @@
 
 .nersery_btn_add_colony
 {
+    white-space: nowrap;
     font-family: 'Russo-one';
     color: rgb(255, 255, 255);
     background-color: rgb(56, 87, 35);
