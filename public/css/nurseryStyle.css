@@ -1,0 +1,42 @@
+.nurseryStyle_modal
+{
+    display: none;
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.626); /* цвет фона */
+    z-index: 0;
+}
+
+.nurseryStyle_modal_container
+{
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 600px;
+    height: 600px;
+}
+
+.nurseryStyle_modal_container_title
+{
+    margin: 5%;
+    font-size: 20px;
+    color: rgb(56, 87, 35);
+    font-family: 'Russo-one';
+    border-bottom: 1px solid rgba(0, 0, 0, 0.323);
+    z-index: 1;
+}
+
+.nurseryStyle_modal.close
+{
+    display: none;
+}
+
+.nurseryStyle_modal.open
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
