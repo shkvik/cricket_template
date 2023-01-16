@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="css/t_pageStyle.css">
+<link rel="stylesheet" type="text/css" href="/css/t_pageStyle.css">
 <link rel="stylesheet" type="text/css" href="/css/nurseryStyle.css">
 <script type="module" src="/javascript/nurseryScript.js"></script>
 
@@ -8,6 +8,33 @@
         <div class="nurseryStyle_modal_container_title">
             Test
         </div>
+
+        
+
+        <form class="nurseryStyle_modal_form" method="post" action="/nursery/addColony">
+
+            <label>Choose parent colony</label>
+            <select name="parent_colony">
+                <option value="">--Please choose an option--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+            <label>Number of bins</label>
+            <input name="number_of_bins" required="required" type="text" placeholder="Number of bins"/>
+
+            <label>Egg density (g/bin)</label>
+            <input name="egg_density" required="required" type="text" placeholder="Number of bins"/>
+
+            <label>Location</label>
+            <input name="location" required="required" type="text" placeholder="Number of bins"/>
+
+            <button type="submit"> Submit </button>
+        </form>
         
     </div>
 </div>

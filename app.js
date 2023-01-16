@@ -1,6 +1,7 @@
 const express = require("express");
 const handlebars = require('express-handlebars');
 const app_configuration = require("./services/app_configuration.js");
+const bodyParser = require('body-parser');
 const app = express();
 
 
@@ -12,6 +13,12 @@ app.engine('hbs',
   })
 );
 
+
+
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 app.use(express.static(__dirname + '/public'));
 
 app_configuration.installRouters(app);

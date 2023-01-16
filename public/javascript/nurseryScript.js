@@ -22,7 +22,6 @@ selectors.btn.add_colony.addEventListener("click", function() {
 });
 
 
-
 document.addEventListener('keyup', function(event){
     if(event.keyCode == 66){
         selectors.modal.add_colony

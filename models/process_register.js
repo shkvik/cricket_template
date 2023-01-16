@@ -12,7 +12,8 @@ const register_process = database.provider.sequelize.define("process_register",
    },
    ColoniesId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        autoIncrement: true
    },
    WindSpeed: {
         type: Sequelize.INTEGER,
