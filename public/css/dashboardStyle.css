@@ -1,0 +1,172 @@
+.dashboard_meta_coontainer
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard_meta_data
+{
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    width: 300px;
+    margin-left: 60px;
+    font-size: 14px;
+    padding-top: 10%;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dashboard_meta_data .key
+{
+    color: #3ECD81;
+    margin-right: 10px;
+}
+
+.dashboard_meta_data .value
+{
+    color: #F5F4F6;
+}
+
+.dashboard_meta_data_header_container
+{
+    color: rgb(56, 87, 35);
+    font-size: 14px;
+    font-family: 'Russo-one';
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard_meta_data_header_container .moon_link
+{
+    padding-top: 5%;
+    text-align: center;
+    
+}
+
+.dashboard_meta_data_header_container .moon_link .moon_title
+{
+    color: rgb(56, 87, 35);
+    text-decoration: none;
+}
+
+.dashboard_meta_data_header_container .moon_link .moon_title:hover
+{
+    color: #FC641E;
+}
+
+.dashboard_notifications
+{
+    height: 300px;
+    width: 90%;
+    border-radius: 30px;
+    margin-bottom: 5%;
+    background-color: #171429;
+}
+
+.dashboard_notifications_title
+{
+    padding-left: 25px;
+    padding-top: 35px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #3ECD81;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+
+
+
+.dashboard_notifications_checkboxs
+{
+    color: #F5F4F6;
+    font-family: 'Poppins';
+    font-weight: lighter;
+    font-size: 18px;
+    display: inline;
+    flex-direction: column;
+}
+
+.dashboard_notifications_checkbox
+{
+    display: flex;
+    flex-direction: row;
+    padding-left: 25px;
+    align-items: center;
+}
+
+
+.dashboard_notifications_item
+{
+    margin-left: 15px;
+}
+
+.dashboard_notifications_checkbox input[type=checkbox]
+{
+    display: none;
+    visibility: hidden;
+}
+
+.dashboard_notifications_checkbox input[type=checkbox]:checked ~ .border .circle
+{
+    background-color: #3ECD81;
+}
+
+.dashboard_notifications_checkbox .border
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: #3ECD81 solid 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard_notifications_checkbox .circle
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: unset;
+}
+
+
+.dashboard_notifications_checkbox .date
+{
+    color: Gray;
+    font-family: 'Poppins';
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.layout_charts
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart_title
+{
+    margin-left: 60px;
+    margin-top: 30px;
+
+    color: #3ECD81;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.chart
+{
+    margin-top: 30px;
+    margin-left: 60px;
+    padding-right: 20px;
+    padding-top: 30px;
+    max-width: 100%;
+    max-height: 400px;
+}

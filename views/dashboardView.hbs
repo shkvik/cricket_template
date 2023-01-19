@@ -1,4 +1,6 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/dashboardStyle.css">
+<link rel="stylesheet" type="text/css" href="/css/checkBox.css">
 
 <script>
     //Тут располагаем инофрмацию для графиков температуры
@@ -23,9 +25,34 @@
 
 <script type="module" src="/javascript/dashboardScript.js"></script>
 
-<div class="content">
 
-    <div class="dash_board_container">
+
+<center_area>
+     <div class="dash_board_container">
+
+        <div class="dashboard_meta_coontainer">
+
+            <div class="dashboard_meta_data_header_container">
+                <div>
+                    <div class="dashboard_meta_data">
+                        <div class="key">  Surface pressure: </div>
+                        <div class="value"> 1016.1 hPa </div>
+                    </div>
+                
+                    <div class="dashboard_meta_data">
+                        <div class="key">  Facility lighting: </div>
+                        <div class="value">  312 lux  </div>
+                    </div>
+
+                    <div class="dashboard_meta_data">
+                        <div class="key"> Feed amount in stock:  </div>
+                        <div class="value"> 138kg </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="layout_charts">
             <div>
                 <div class="chart_title"> Temperature ℃ </div>
@@ -44,73 +71,138 @@
             
         </div>
 
-        <div class="dashboard_meta_coontainer">
+        
+    </div>       
+</center_area>
 
-            <div class="dashboard_meta_data_header_container">
-                <div>
-                    <div class="dashboard_meta_data">
-                        <div> Surface pressure: 1016.1 hPa  </div>
-                    </div>
-                
-                    <div class="dashboard_meta_data">
-                        <div> Facility lighting: 312 lux  </div>
-                    </div>
+<right_area>
+    <div class="dashboard_notifications">
+        <div class="dashboard_notifications_title"> Notifications </div>
 
-                    <div class="dashboard_meta_data">
-                        <div> Feed amount in stock: 138kg  </div>
-                    </div>
+        <div class="dashboard_notifications_checkboxs"> 
+            <label class="dashboard_notifications_checkbox">
+
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+
+                <div class="border">
+                    <div class="circle"></div>
                 </div>
-                <div class="moon_link">
-                    <a href="https://moonphase.guide/" class="moon_title">
-                        <img src="img/moon.png"/>
-                        <div>Moon phase</div>
-                    </a>
-                </div>
-            </div>
+
+                <label class="dashboard_notifications_item" for="vehicle1">
+                        Colony 8, Add Feed
+                </label>
+                <div class="date"> 23.01.23 </div>
+            </label>
             
-            <div class="dashboard_notifications">
-                <div class="dashboard_notifications_title"> Notifications </div>
+            <label class="dashboard_notifications_checkbox">
 
-                <div class="dashboard_notifications_checkboxs"> 
-                    <div class="dashboard_notifications_checkbox">
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                        <label class="dashboard_notifications_item" for="vehicle1">
-                             Colony 8, Add Feed
-                        </label>
-                        <div class="date"> 23.01.23 </div>
-                    </div>
-                    
-                    <div class="dashboard_notifications_checkbox">
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                        <label class="dashboard_notifications_item" for="vehicle1">
-                             Colony 8, Harvest protein
-                        </label>
-                        <div class="date"> 23.01.23 </div>
-                    </div>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
 
-                    <div class="dashboard_notifications_checkbox">
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                        <label class="dashboard_notifications_item" for="vehicle1">
-                             Colony 7, Feed colony
-                        </label>
-                        <div class="date"> 23.01.23 </div>
-                    </div>
-
-                    <div class="dashboard_notifications_checkbox">
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                        <label class="dashboard_notifications_item" for="vehicle1">
-                             Colony 1, Check the colony
-                        </label>
-                        <div class="date"> 23.01.23 </div>
-                    </div>
-
+                <div class="border">
+                    <div class="circle"></div>
                 </div>
-                
-            </div>
+
+                <label class="dashboard_notifications_item" for="vehicle1">
+                        Colony 8, Add Feed
+                </label>
+                <div class="date"> 23.01.23 </div>
+            </label>
+
+            <label class="dashboard_notifications_checkbox">
+
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+
+                <div class="border">
+                    <div class="circle"></div>
+                </div>
+
+                <label class="dashboard_notifications_item" for="vehicle1">
+                        Colony 8, Add Feed
+                </label>
+                <div class="date"> 23.01.23 </div>
+            </label>
+
+            <label class="dashboard_notifications_checkbox">
+
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+
+                <div class="border">
+                    <div class="circle"></div>
+                </div>
+
+                <label class="dashboard_notifications_item" for="vehicle1">
+                        Colony 8, Add Feed
+                </label>
+                <div class="date"> 23.01.23 </div>
+            </label>
 
         </div>
-
-
+        
     </div>
 
-</div>
+    <div class="dashboard_notifications">
+        <div class="dashboard_notifications_title"> Notifications </div>
+
+        <div class="dashboard_notifications_checkboxs"> 
+            <label class="dashboard_notifications_checkbox">
+
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+
+                <div class="border">
+                    <div class="circle"></div>
+                </div>
+
+                <label class="dashboard_notifications_item" for="vehicle1">
+                        Colony 8, Add Feed
+                </label>
+                <div class="date"> 23.01.23 </div>
+            </label>
+            
+            <label class="dashboard_notifications_checkbox">
+
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+
+                <div class="border">
+                    <div class="circle"></div>
+                </div>
+
+                <label class="dashboard_notifications_item" for="vehicle1">
+                        Colony 8, Add Feed
+                </label>
+                <div class="date"> 23.01.23 </div>
+            </label>
+
+            <label class="dashboard_notifications_checkbox">
+
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+
+                <div class="border">
+                    <div class="circle"></div>
+                </div>
+
+                <label class="dashboard_notifications_item" for="vehicle1">
+                        Colony 8, Add Feed
+                </label>
+                <div class="date"> 23.01.23 </div>
+            </label>
+
+            <label class="dashboard_notifications_checkbox">
+
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+
+                <div class="border">
+                    <div class="circle"></div>
+                </div>
+
+                <label class="dashboard_notifications_item" for="vehicle1">
+                        Colony 8, Add Feed
+                </label>
+                <div class="date"> 23.01.23 </div>
+            </label>
+
+        </div>
+        
+    </div>
+
+    
+</right_area>

@@ -12,15 +12,15 @@ exports.index = function (request, response){
         [
             {
                 mounth: 'January',
-                value: 26
+                value: 50
             },
             {
                 mounth: 'February',
-                value: 39
+                value: 70
             },
             {
                 mounth: 'March ',
-                value: 36
+                value: 80
             },
             {
                 mounth: 'April ',

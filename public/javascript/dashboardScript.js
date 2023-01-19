@@ -1,19 +1,36 @@
 
-const ctx = document.getElementById('myChart');
+const temperatureChart = document.getElementById('myChart').getContext("2d");
 
-new Chart(ctx, 
+var gradient = temperatureChart.createLinearGradient(0, 0, 0, 260);
+    gradient.addColorStop(0, 'rgba(62,205,129,1)');
+    gradient.addColorStop(1, 'rgba(0,0,0,0)');
+
+new Chart(temperatureChart, 
 {
     type: 'line',
+    
     data: 
     {
+
         labels: temperature_mounths,
+        
         datasets: 
         [
             {
                 data: temperature_values,
-                borderWidth: 1
-            }
+                borderWidth: 1,
+                backgroundColor: '#3ECD81',
+                tension: 0.3,
+                borderColor: '#3ECD81',
+                fill: 
+                {
+                    target: 'origin',
+                    above: gradient,   // Area will be red above the origin
+                }
+            },
+            
         ]
+
     },
     options:
     {
@@ -30,9 +47,8 @@ new Chart(ctx,
             legend: 
             {
                 display: false
-            }
-        }
-
+            },
+        },
     }
 });
 
@@ -48,7 +64,15 @@ new Chart(ctx2,
         [
             {
                 data: Humidity_values,
-                borderWidth: 1
+                borderWidth: 1,
+                backgroundColor: '#3ECD81',
+                tension: 0.3,
+                borderColor: '#3ECD81',
+                fill: 
+                {
+                    target: 'origin',
+                    above: gradient,   // Area will be red above the origin
+                }
             }
         ]
     },
@@ -85,7 +109,15 @@ new Chart(ctx3,
         [
             {
                 data: Humidity_values,
-                borderWidth: 1
+                borderWidth: 1,
+                backgroundColor: '#3ECD81',
+                tension: 0.3,
+                borderColor: '#3ECD81',
+                fill: 
+                {
+                    target: 'origin',
+                    above: gradient,   // Area will be red above the origin
+                }
             }
         ]
     },

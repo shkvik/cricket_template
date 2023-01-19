@@ -1,0 +1,144 @@
+
+body
+{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: #0E0C17;
+    
+}
+
+body_container{
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+
+menu
+{
+    margin-top: 0%;
+    margin-left: 0%;
+    background: linear-gradient(90deg, rgba(62, 205, 129, 0) -100.39%, rgba(51, 216, 128, 0.6) 300.14%);
+    border-radius: 0px 40px 40px 0px;
+    width: 200px;
+    min-height: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+header
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+header logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header_divider
+{
+    margin-bottom: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header_divider .line
+{
+    background-color: #171429;
+    border-radius: 20px;
+    height: 10px;
+    width: 100%;
+}
+
+header_divider .text
+{
+    font-family: 'Poppins';
+    white-space: nowrap;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: #F5F4F6;
+}
+
+header_divider .moonImg
+{
+    margin-right: 0%;
+}
+
+center_area
+{
+    margin-left: 0px;
+    /* border: 1px solid rgb(255, 255, 255); */
+    width: 100%;
+    height: 1200px;
+}
+
+right_area
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0%;
+    margin-left: auto;
+    /* border: 1px solid rgb(255, 255, 255); */
+    width: 2000px;
+    height: 600px;
+}
+
+footer
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*
+EXAMPLE
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/layout.css">
+    <link rel="stylesheet" type="text/css" href="/themeButton.css">
+</head>
+
+<body>
+    <header>
+
+        <logo> </logo>
+        
+    </header>
+
+    <body_container>
+
+        <menu> 
+
+        </menu>
+
+        <center_area>
+            center_area
+        </center_area>
+
+        <right_area>
+            right_area
+        </right_area>
+
+    </body_container>
+    
+    <footer> footer </footer>
+</body>
+<html>
+
+*/
