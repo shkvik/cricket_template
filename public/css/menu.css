@@ -46,15 +46,22 @@ menu .item_link
     transition: .3s;
     z-index: 1;
     position: absolute;
+    display: flex;
+    align-items: center;
     margin-top: 58px;
     margin-left: 30px;
-    transform: translateX(-15px);
+    transform: translate(-15px, -3px);
 }
 
 
+menu .divider
+{
+    margin-top: 40px;
+}
+
 menu .icon
 {
-    margin-right: 5px;
+    margin-right: 10px;
     cursor: pointer;
 }
 

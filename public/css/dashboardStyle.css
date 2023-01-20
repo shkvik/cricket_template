@@ -42,7 +42,6 @@
 {
     padding-top: 5%;
     text-align: center;
-    
 }
 
 .dashboard_meta_data_header_container .moon_link .moon_title
@@ -67,12 +66,11 @@
 
 .dashboard_notifications_title
 {
-    padding-left: 25px;
+    padding-left: 40px;
     padding-top: 35px;
     margin-bottom: 15px;
-    font-size: 16px;
     color: #3ECD81;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     font-family: 'Poppins';
 }
@@ -84,16 +82,17 @@
     color: #F5F4F6;
     font-family: 'Poppins';
     font-weight: lighter;
-    font-size: 18px;
+    font-size: 20px;
     display: inline;
     flex-direction: column;
 }
 
 .dashboard_notifications_checkbox
 {
+    margin-top: 12px;
     display: flex;
     flex-direction: row;
-    padding-left: 25px;
+    padding-left: 40px;
     align-items: center;
 }
 
@@ -141,6 +140,174 @@
     font-family: 'Poppins';
     margin-left: auto;
     margin-right: 30px;
+}
+
+.dashboard_scoreboard_box
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 90%;
+}
+
+.dashboard_scoreboard_box .section
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+.dashboard_scoreboard_box .section:nth-child(2)
+{
+    display: flex;
+    flex-direction: row;
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.dashboard_scoreboard_box .section .firstrow
+{
+    height: 76px;
+    width: 48%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    background-color: #171429;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.dashboard_scoreboard_box .section .firstrow label
+{
+    margin-left: 40px;
+    margin-right: 20px;
+    color: #3ECD81;
+}
+
+.dashboard_scoreboard_box .section .firstrow .score
+{
+    color: #F5F4F6;
+}
+
+.dashboard_scoreboard_box .section .firstrow:nth-child(2)
+{
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.dashboard_scoreboard_box .section .secondrow
+{
+    height: 234px;
+    width: 48%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    background-color: #171429;
+    font-size: 21px;
+
+    font-family: 'Poppins';
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dashboard_scoreboard_box .section .secondrow .title
+{
+    margin-top: 30px;
+    margin-left: 40px;
+    font-weight: bold;
+    color: #3ECD81;
+}
+
+.dashboard_scoreboard_box .section .secondrow .line
+{
+    margin-top: 16px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard_scoreboard_box .section .secondrow .line label
+{
+    margin-right: 20px;
+    font-weight:100;
+    color: #F5F4F6;
+}
+
+.dashboard_scoreboard_box .section .secondrow .line .score
+{
+    font-weight:bold;
+    color: #F5F4F6;
+}
+
+.dashboard_scoreboard_box .section .secondrow:nth-child(2)
+{
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.dashboard_scoreboard_box .section .thirdrow
+{
+    height: 190px;
+    width: 48%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    background-color: #171429;
+    font-size: 21px;
+
+    font-family: 'Poppins';
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dashboard_scoreboard_box .section .thirdrow .title
+{
+    margin-top: 30px;
+    margin-left: 40px;
+    font-weight: bold;
+    color: #F2C94C;
+}
+
+.dashboard_scoreboard_box .section .thirdrow .line
+{
+    margin-top: 16px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard_scoreboard_box .section .thirdrow .line label
+{
+    margin-right: 20px;
+    font-weight:100;
+    color: #F5F4F6;
+}
+
+.dashboard_scoreboard_box .section .thirdrow .line .score
+{
+    font-weight:bold;
+    color: #F5F4F6;
+}
+
+.dashboard_scoreboard_box .section .thirdrow:nth-child(2)
+{
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.dashboard_scoreboard_box .section .thirdrow:nth-child(2) .title
+{
+    color:#3ECD81;
 }
 
 .layout_charts

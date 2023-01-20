@@ -13,8 +13,6 @@ const neonates_tray = database.provider.sequelize.define("neonates_tray",
     freezeTableName: true
 });
 
-
-
 const incubation_box = database.provider.sequelize.define("incubation_box", 
 {
     id:         {type: Sequelize.INTEGER, allowNull: false, autoIncrement: true,primaryKey: true,},
@@ -25,8 +23,6 @@ const incubation_box = database.provider.sequelize.define("incubation_box",
 {
     freezeTableName: true
 });
-
-
 
 const incubation_box_load = database.provider.sequelize.define("incubation_box_load", 
 {
@@ -72,12 +68,9 @@ incubation_box.hasOne(incubation_box_load, {
 
 incubation_box_load.belongsToMany(neonates_tray,{
     through: neonates_tray_load,
-    onDelete: "cascade",
     foreignKey: "incubation_box_id"
 });
 
 neonates_tray.belongsToMany(incubation_box_load,{
-    through: neonates_tray_load,
-    onDelete: "cascade",
-    foreignKey: "neonates_tray_id"
+    through: neonates_tray_load
 });

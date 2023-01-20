@@ -1,7 +1,6 @@
 const DashboardModel = require("../models/dashboardModel.js");
 
-
-exports.index = function (request, response){
+exports.index = async function (request, response){
 
     var dashboard = new DashboardModel();
 
