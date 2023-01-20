@@ -1,5 +1,5 @@
 const {Sequelize} = require("sequelize");
-const database = require('../../../database');
+const database = require('../..');
 
 
 const neonates_tray = database.provider.sequelize.define("neonates_tray", 

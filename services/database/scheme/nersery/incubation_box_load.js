@@ -1,7 +1,5 @@
 const {Sequelize} = require("sequelize");
 const database = require('../../../database');
-const neonates_tray = require('./neonates_tray.js');
-const neonates_tray_load = require('./incubation_box_load.js');
 
 const incubation_box_load = database.provider.sequelize.define("incubation_box_load", 
 {
