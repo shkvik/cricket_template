@@ -79,12 +79,33 @@
 
 .dashboard_notifications_checkboxs
 {
+    overflow-y: scroll;
     color: #F5F4F6;
     font-family: 'Poppins';
     font-weight: lighter;
     font-size: 20px;
-    display: inline;
-    flex-direction: column;
+    max-height: 160px;
+    
+    /* display: inline;
+    flex-direction: column; */
+}
+
+.dashboard_notifications_checkboxs::-webkit-scrollbar {
+    
+    width: 20px;               /* ширина scrollbar */
+}
+.dashboard_notifications_checkboxs::-webkit-scrollbar-track {
+    
+    background: none;        /* цвет дорожки */
+   
+}
+
+.dashboard_notifications_checkboxs::-webkit-scrollbar-thumb {
+    scroll-margin-right: 20px;
+    scroll-padding-right: 20px;
+    background-color: #221D34;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 7px solid #171429;
 }
 
 .dashboard_notifications_checkbox
@@ -336,4 +357,8 @@
     padding-top: 30px;
     max-width: 100%;
     max-height: 400px;
+}
+
+center_area{
+    height: 800px;
 }

@@ -1,31 +1,13 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="/javascript/dashboard/dashboardInfoScript.js"></script>
+<script type="module" src="/javascript/dashboard/dashboardChartScript.js"></script>
+<script type="module" src="/javascript/dashboard/dashboardScoreboardScript.js"></script>
+
+
 <link rel="stylesheet" type="text/css" href="/css/dashboardStyle.css">
 <link rel="stylesheet" type="text/css" href="/css/checkBox.css">
 
-<script>
-    //Тут располагаем инофрмацию для графиков температуры
-    var temperature_mounths = new Array();
-    var temperature_values  = new Array();
-
-    {{#each this.Temperature}}
-        temperature_mounths.push("{{this.mounth}}");
-        temperature_values.push("{{this.value}}");
-    {{/each}}
-    
-    //Тут располагаем инофрмацию для графиков влажности
-    var Humidity_values = new Array();
-    var humidity_hours = new Array();
-
-    {{#each this.Humidity}}
-        humidity_hours.push("{{this.hour}}");
-        Humidity_values.push("{{this.value}}");
-    {{/each}}
-
-</script>
-
-<script type="module" src="/javascript/dashboardScript.js"></script>
-
-
+<a id="pageName" style="display: none;" name="dashboard"> </a>
 
 <center_area>
      <div class="dash_board_container">
@@ -135,7 +117,33 @@
                 </label>
                 <div class="date"> 23.01.23 </div>
             </label>
+            
+            <label class="dashboard_notifications_checkbox">
 
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+
+                <div class="border">
+                    <div class="circle"></div>
+                </div>
+
+                <label class="dashboard_notifications_item" for="vehicle1">
+                        Colony 8, Add Feed
+                </label>
+                <div class="date"> 23.01.23 </div>
+            </label>
+            <label class="dashboard_notifications_checkbox">
+
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+
+                <div class="border">
+                    <div class="circle"></div>
+                </div>
+
+                <label class="dashboard_notifications_item" for="vehicle1">
+                        Colony 8, Add Feed
+                </label>
+                <div class="date"> 23.01.23 </div>
+            </label>
         </div>
         
     </div>
@@ -145,12 +153,12 @@
 
             <div class="firstrow">
                 <label> Temperature: </label>
-                <div class="score"> 32.9 </div>
+                <div class="score" id="temperature"> 32.9 </div>
             </div>
 
             <div class="firstrow">
                 <label> Humidity: </label>
-                <div class="score"> 73.1 </div>
+                <div class="score" id="humidity"> 73.1 </div>
             </div>
         </div>
 
@@ -159,28 +167,28 @@
                 <div class="title"> CO2, ppm </div>
 
                 <div class="line">
-                        <label> MAX: </label> <div class="score"> 1100</div>
+                        <label> MAX: </label> <div class="score" id="co2_ppm_max"> 1100</div>
                 </div>
 
                 <div class="line">
-                        <label> AVERAGE: </label> <div class="score"> 966.67</div>
+                        <label> AVERAGE: </label> <div class="score"  id="co2_ppm_average"> 966.67</div>
                 </div>
 
                 <div class="line">
-                        <label> MIN: </label> <div class="score"> 800</div>
+                        <label> MIN: </label> <div class="score"  id="co2_ppm_min"> 800</div>
                 </div>
             </div>
 
             <div class="secondrow">
                 <div class="title"> NH3, % </div>
                 <div class="line">
-                        <label> MAX: </label> <div class="score"> N/A</div>
+                        <label> MAX: </label> <div class="score" id="nh3_max"> N/A</div>
                 </div>
                 <div class="line">
-                        <label> AVERAGE: </label> <div class="score"> N/A</div>
+                        <label> AVERAGE: </label> <div class="score" id="nh3_average"> N/A</div>
                 </div>
                 <div class="line">
-                        <label> MIN: </label> <div class="score"> N/A</div>
+                        <label> MIN: </label> <div class="score" id="nh3_min"> N/A</div>
                 </div>
             </div>
         </div>
@@ -189,11 +197,11 @@
             <div class="thirdrow">
                 <div class="title"> Farm results, kg </div>
                 <div class="line">
-                    <label> Crickets: </label> <div class="score"> 14 789</div>
+                    <label> Crickets: </label> <div class="score" id="farm_results_crickets"> 14 789</div>
                 </div>
 
                 <div class="line">
-                    <label> Frass: </label> <div class="score"> 15 621</div>
+                    <label> Frass: </label> <div class="score" id="farm_results_frass"> 15 621</div>
                 </div>
             </div>
 
@@ -201,11 +209,11 @@
                 <div class="title"> Prediction, kg </div>
 
                 <div class="line">
-                    <label> Crickets: </label> <div class="score"> 15 433</div>
+                    <label> Crickets: </label> <div class="score" id="prediction_crickets"> 15 433</div>
                 </div>
 
                 <div class="line">
-                    <label> Frass: </label> <div class="score"> 16 029</div>
+                    <label> Frass: </label> <div class="score" id="prediction_frass"> 16 029</div>
                 </div>
 
             </div>

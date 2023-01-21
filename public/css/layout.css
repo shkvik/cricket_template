@@ -23,7 +23,7 @@ menu
     background: linear-gradient(90deg, rgba(62, 205, 129, 0) -100.39%, rgba(51, 216, 128, 0.6) 300.14%);
     border-radius: 0px 40px 40px 0px;
     width: 200px;
-    min-height: 1000px;
+    min-height: 1200px;
     display: flex;
     flex-direction: column;
 }
