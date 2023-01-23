@@ -120,6 +120,7 @@
 
 .nurseryTable table
 {
+
     color: aliceblue;
     font-family: 'Poppins';
     font-weight: 100;
@@ -196,12 +197,51 @@
 
 .nurseryTable table tr:last-child td:first-child
 {
-    border-radius: 0px 0px 0px 16px;
+    padding-left: 0%;
+    height: 36px;
+    border-radius: 0px 0px 16px 16px;
 }
 
-.nurseryTable table tr:last-child td:last-child
+.nurseryTable table tr:last-child td:first-child .link
 {
-    border-radius: 0px 0px 16px 0px;
+    width: 130px;
+    height: 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.nurseryTable table tr:last-child td:first-child a
+{
+    padding-left: auto;
+    padding-right: auto;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nurseryTable table tr:last-child td:first-child .pointer
+{
+    cursor: pointer;
+    padding-left: 2px;
+}
+
+.nurseryTable table tr:last-child td:first-child a:hover
+{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+}
+
+.nurseryTable table tr:last-child
+{
+    border-radius: 0px 0px 16px 16px;
+    background-color: rgba(255, 255, 255, 0.06);
 }
 
 .nurseryTable .btn_show
@@ -346,4 +386,9 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.input_a
+{
+    
 }

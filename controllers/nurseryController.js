@@ -1,13 +1,14 @@
 
 exports.index = async function (request, response)
 {
-    response.render("../views/nurseryView.hbs", 
+    console.log(request.query.inc_box_table_page);
+    response.render("../views/nersery/nurseryIndexView.hbs", 
     {
         Title: 'dashboard.Title',
     });
 };
 
-exports.addNeonatesTrays = async function(request, response)
+exports.add_neonates_trays = async function(request, response)
 {
     console.log(
     {
@@ -17,7 +18,7 @@ exports.addNeonatesTrays = async function(request, response)
     response.redirect("/nursery"); 
 };
 
-exports.addIncubationBox = async function(request, response)
+exports.add_incubation_box = async function(request, response)
 {
     console.log(
     {
@@ -26,4 +27,9 @@ exports.addIncubationBox = async function(request, response)
     });
     
     response.redirect("/nursery"); 
+};
+
+exports.get_cart_incubation_box = async function(request, response)
+{
+    response.render('../views/nersery/nurseryIncubationBoxCartView.hbs');
 };

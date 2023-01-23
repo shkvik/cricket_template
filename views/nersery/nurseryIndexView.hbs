@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/css/t_pageStyle.css">
-<link rel="stylesheet" type="text/css" href="/css/nurseryStyle.css">
+<link rel="stylesheet" type="text/css" href="/css/nursery/nurseryStyle.css">
 <script type="module" src="/javascript/nurseryScript.js"></script>
-
+<script type="module" src="/javascript/nursery/nurseryPaginationScript.js"></script>
 
 <a id="pageName" style="display: none;" name="nursery"> </a>
 
@@ -174,7 +174,7 @@
                 <td>14.01.23</td>
                 <td>19.01.23</td>
                 <td>
-                    <div class="btn_show">
+                    <div class="btn_show" onclick="location.href='/nursery/incubationBox/1';">
                         <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.0635 5.38572L1.0648 5.38396C3.57756 2.00354 6.82016 0.25 10.0489 0.25C13.847 0.25 17.1338 2.57438 19.079 5.39411L19.0798 5.39521C19.1912 5.55778 19.25 5.7462 19.25 5.93805C19.25 6.1296 19.1912 6.31809 19.0801 6.48048C17.1372 9.33545 13.8725 11.625 10.0489 11.625C6.18441 11.625 2.98296 9.34032 1.0446 6.49321C0.930583 6.32704 0.871947 6.13378 0.875122 5.93764C0.878306 5.741 0.943492 5.54894 1.0635 5.38572ZM10.0489 1.0864C7.20177 1.0864 4.21159 2.6326 1.81701 5.85154C1.77435 5.9089 1.77144 5.98753 1.81283 6.04833C3.64565 8.74099 6.59513 10.7886 10.0489 10.7886C13.4643 10.7886 16.4765 8.73299 18.3119 6.03558L18.3129 6.03409C18.3222 6.02049 18.3294 6.00562 18.3343 5.98996L18.3351 5.98719C18.3422 5.96469 18.3443 5.941 18.3414 5.91764L18.3412 5.91642C18.3392 5.90042 18.3349 5.88478 18.3283 5.87L18.3277 5.86856C18.3235 5.85909 18.3184 5.85003 18.3125 5.84148C16.471 3.17277 13.435 1.0864 10.0489 1.0864Z" fill="white" fill-opacity="0.7"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0626 8.44673C11.4721 8.44673 12.6147 7.32332 12.6147 5.93754C12.6147 4.55175 11.4721 3.42834 10.0626 3.42834C8.6531 3.42834 7.5105 4.55175 7.5105 5.93754C7.5105 7.32332 8.6531 8.44673 10.0626 8.44673ZM10.0626 7.61033C11.0022 7.61033 11.764 6.86139 11.764 5.93754C11.764 5.01368 11.0022 4.26474 10.0626 4.26474C9.12293 4.26474 8.36119 5.01368 8.36119 5.93754C8.36119 6.86139 9.12293 7.61033 10.0626 7.61033Z" fill="white" fill-opacity="0.7"/>
@@ -225,6 +225,20 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0626 8.44673C11.4721 8.44673 12.6147 7.32332 12.6147 5.93754C12.6147 4.55175 11.4721 3.42834 10.0626 3.42834C8.6531 3.42834 7.5105 4.55175 7.5105 5.93754C7.5105 7.32332 8.6531 8.44673 10.0626 8.44673ZM10.0626 7.61033C11.0022 7.61033 11.764 6.86139 11.764 5.93754C11.764 5.01368 11.0022 4.26474 10.0626 4.26474C9.12293 4.26474 8.36119 5.01368 8.36119 5.93754C8.36119 6.86139 9.12293 7.61033 10.0626 7.61033Z" fill="white" fill-opacity="0.7"/>
                         </svg>
                     </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <div class="link">
+                        <a class="input_a"> 1 </a>
+                        <a href=""> 2 </a>
+                        <a href=""> 3 </a>
+                        <a href=""> 4 </a>
+                        <a href="">...</a>
+                        <a href=""> 45 </a>
+                        <img src="/img/table_pagination_pointer.svg" class="pointer">
+                    </div>
+
                 </td>
             </tr>
         </table>
@@ -333,6 +347,20 @@
                 <td>4</td>
                 <td>14.01.23</td>
                 <td>19.01.23</td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <div class="link">
+                        <a href=""> 1 </a>
+                        <a href=""> 2 </a>
+                        <a href=""> 3 </a>
+                        <a href=""> 4 </a>
+                        <a href="">...</a>
+                        <a href=""> 45 </a>
+                        <img src="/img/table_pagination_pointer.svg" class="pointer">
+                    </div>
+
+                </td>
             </tr>
         </table>
     </div>
