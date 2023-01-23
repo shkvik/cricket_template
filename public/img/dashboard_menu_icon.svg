@@ -1,0 +1,18 @@
+<svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="path-1-inside-1_12_10982" fill="white">
+    <rect x="3" y="3" width="8" height="11" rx="1"/>
+    </mask>
+    <rect x="3" y="3" width="8" height="11" rx="1" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2.4" mask="url(#path-1-inside-1_12_10982)"/>
+    <mask id="path-2-inside-2_12_10982" fill="white">
+    <rect x="13" y="10" width="8" height="11" rx="1"/>
+    </mask>
+    <rect x="13" y="10" width="8" height="11" rx="1" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2.4" mask="url(#path-2-inside-2_12_10982)"/>
+    <mask id="path-3-inside-3_12_10982" fill="white">
+    <rect x="13" y="3" width="8" height="5" rx="1"/>
+    </mask>
+    <rect x="13" y="3" width="8" height="5" rx="1" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2.4" mask="url(#path-3-inside-3_12_10982)"/>
+    <mask id="path-4-inside-4_12_10982" fill="white">
+    <rect x="3" y="16" width="8" height="5" rx="1"/>
+    </mask>
+    <rect x="3" y="16" width="8" height="5" rx="1" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2.4" mask="url(#path-4-inside-4_12_10982)"/>
+</svg>

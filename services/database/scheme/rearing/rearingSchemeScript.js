@@ -79,3 +79,9 @@ prepupae_trays.hasOne(prepupae_trays_load, {
     onDelete: "cascade",
     foreignKey: "prepupae_trays_id"
 });
+
+
+larvae_trays.sync({ alter: true });
+larvae_trays_load.sync({ alter: true });
+prepupae_trays.sync({ alter: true });
+prepupae_trays_load.sync({ alter: true });

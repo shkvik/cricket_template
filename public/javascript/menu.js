@@ -59,17 +59,23 @@ const menu = {
 async function bindEventHoverMenuItem(page){
 
     if(document.getElementById('pageName').name == page.title){
-        page.item.style["opacity"] = "unset";
+        page.item.style.opacity = "unset";
         return;
     }
     
-    page.link.addEventListener('mouseover', function(){
-        page.item.style["opacity"] = "unset";
-    });
-    page.link.addEventListener('mouseout', function() {
-        page.item.style["opacity"] = ".0";
-    });
+    // page.link.addEventListener('mouseover', function(){
+    //     page.item.style["opacity"] = "unset";
+    // });
+    // page.link.addEventListener('mouseout', function() {
+    //     page.item.style["opacity"] = ".0";
+    // });
 }
+
+let cords = ['scrollX','scrollY'];
+// Перед закрытием записываем в локалсторадж window.scrollX и window.scrollY как scrollX и scrollY
+window.addEventListener('unload', e => cords.forEach(cord => localStorage[cord] = window[cord]));
+// Прокручиваем страницу к scrollX и scrollY из localStorage (либо 0,0 если там еще ничего нет)
+window.scroll(...cords.map(cord => localStorage[cord]));
 
 await bindEventHoverMenuItem(menu.dashboard);
 await bindEventHoverMenuItem(menu.nursery);

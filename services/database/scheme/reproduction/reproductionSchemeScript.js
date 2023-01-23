@@ -74,3 +74,9 @@ fly_cage.hasOne(fly_cage_load, {
     onDelete: "cascade",
     foreignKey: "fly_cage_id"
 });
+
+
+dark_cage.sync({ alter: true });
+dark_cage_load.sync({ alter: true });
+fly_cage.sync({ alter: true });
+fly_cage_load.sync({ alter: true });

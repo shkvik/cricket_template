@@ -86,3 +86,11 @@ prepupae_feed.hasOne(prepupae_feed_load, {
     onDelete: "cascade",
     foreignKey: "prepupae_feed_id"
 });
+
+
+neonate_feed        .sync({ alter: true });
+neonate_feed_load   .sync({ alter: true });
+growing_feed        .sync({ alter: true });
+growing_feed_load   .sync({ alter: true });
+prepupae_feed       .sync({ alter: true });
+prepupae_feed_load  .sync({ alter: true });

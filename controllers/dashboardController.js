@@ -78,10 +78,12 @@ exports.get_temperature = async function(request, response){
         title: "temperature",
         data: 
         [
-            {key: 'January',     value: getRandomInt(100)},
+            {key: 'Привет',     value: getRandomInt(100)},
             {key: 'February',    value: getRandomInt(100)},
             {key: 'March',       value: getRandomInt(100)},   
             {key: 'April',       value: getRandomInt(100)},  
+            {key: 'May',         value: getRandomInt(100)},
+            {key: 'May',         value: getRandomInt(100)},
             {key: 'May',         value: getRandomInt(100)},
         ],    
    });
@@ -89,73 +91,6 @@ exports.get_temperature = async function(request, response){
 
 exports.index = async function (request, response){
 
-    var dashboard = new DashboardModel();
+    response.render("../views/dashboardView.hbs");
 
-    response.render("../views/dashboardView.hbs", 
-    {
-        json: JSON.stringify({ user: 'geek' }),
-        Title: dashboard.Title,
-        Temperature: 
-        [
-            {
-                mounth: 'January',
-                value: 50
-            },
-            {
-                mounth: 'February',
-                value: 70
-            },
-            {
-                mounth: 'March ',
-                value: 80
-            },
-            {
-                mounth: 'April ',
-                value: 30
-            },
-            {
-                mounth: 'May ',
-                value: 19
-            },
-        ],
-        Humidity: 
-        [
-            {
-                hour: '00:00',
-                value: 80
-            },
-            {
-                hour: '03:00',
-                value: 70
-            },
-            {
-                hour: '06:00',
-                value: 60
-            },
-            {
-                hour: '09:00',
-                value: 50
-            },
-            {
-                hour: '12:00',
-                value: 40
-            },
-            {
-                hour: '15:00',
-                value: 50
-            },
-            {
-                hour: '18:00',
-                value: 60
-            },
-            {
-                hour: '21:00',
-                value: 70
-            },
-            {
-                hour: '24:00',
-                value: 90
-            },
-        ]
-    });
 };

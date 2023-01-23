@@ -74,3 +74,8 @@ incubation_box_load.belongsToMany(neonates_tray,{
 neonates_tray.belongsToMany(incubation_box_load,{
     through: neonates_tray_load
 });
+
+incubation_box.sync({ alter: true });
+incubation_box_load.sync({ alter: true });
+neonates_tray.sync({ alter: true });
+neonates_tray_load.sync({ alter: true });

@@ -1,30 +1,28 @@
-var classes = {
-    btn: { add_colony: "nersery_btn_add_colony"},
-    modal: { add_colony: "nurseryStyle_modal"}
+const incubation_box = {
+    btn_open: document.getElementById('btn_add_incubation_box'),
+    btn_close: document.getElementById('btn_close_add_incubation_box'),
+    window: document.getElementById('incubationModal')
 }
 
-var selectors = {
-    btn: { add_colony: document.querySelector(`.${classes.btn.add_colony}`)},
-    modal: { add_colony: document.querySelector(`.${classes.modal.add_colony}`)} 
+const neonates_box = {
+    btn_open: document.getElementById('btn_add_neonates_trays'),
+    btn_close: document.getElementById('btn_close_add_neonates_tray'),
+    window: document.getElementById('neonatesModal')
 }
 
+async function bindAllFunctional(box){
 
-selectors.btn.add_colony.addEventListener("click", function() {
-    selectors.modal.add_colony
-        .setAttribute('class', `${classes.modal.add_colony} open`);
-        
-    window.onclick = function(event){
-        if(event.target.getAttribute('class') ==  `${classes.modal.add_colony} open`){
-            selectors.modal.add_colony
-                .setAttribute('class', `${classes.modal.add_colony} close`);
-        }
-    }
-});
+    var modalName = 'nurseryStyle_modal';
+    box.btn_open.addEventListener('click', function() {
+        document.body.style.overflow = "hidden";
+        box.window.setAttribute('class', `${modalName} open`);
+    });
 
+    box.btn_close.addEventListener('click', function() {
+        document.body.style.overflow = "auto";
+        box.window.setAttribute('class', `${modalName} close`);
+    });
+}
 
-document.addEventListener('keyup', function(event){
-    if(event.keyCode == 66){
-        selectors.modal.add_colony
-            .setAttribute('class', `${classes.modal.add_colony} close`);
-    }
-});
+await bindAllFunctional(neonates_box);
+await bindAllFunctional(incubation_box);

@@ -71,3 +71,9 @@ production_load.hasOne(raw_material_batch, {
     onDelete: "cascade",
     foreignKey: "production_load_id"
 })
+
+
+product.sync({ alter: true });
+equipment.sync({ alter: true });
+production_load.sync({ alter: true });
+raw_material_batch.sync({ alter: true });

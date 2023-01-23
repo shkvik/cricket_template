@@ -6,11 +6,11 @@ const app = express();
 
 
 app.engine('hbs',
-  handlebars.engine({
-    layoutsDir: 'views/layout',
-    defaultLayout: 'layout.hbs',
-    extname: '.hbs',
-  })
+    handlebars.engine({
+        layoutsDir: 'views/layout',
+        defaultLayout: 'layout.hbs',
+        extname: '.hbs',
+    })
 );
 
 app.use(bodyParser.json());

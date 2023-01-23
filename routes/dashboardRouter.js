@@ -13,3 +13,4 @@ dashboardRouter.get("/get_fcr", dashboardController.get_fcr);
 dashboardRouter.get("/get_scoreboard", dashboardController.get_scoreboard);
 
 module.exports = dashboardRouter;
+

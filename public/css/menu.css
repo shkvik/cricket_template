@@ -7,13 +7,11 @@
 
 menu item
 {
-    color: #F5F4F6;
-    margin-left: 25px;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     max-height: 80px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 15px;
     font-family: 'Poppins';
 }
 
@@ -42,7 +40,7 @@ menu .item_select
 
 menu .item_link
 {
-    color: aliceblue;
+    color: rgba(255, 255, 255, 0.6);
     transition: .3s;
     z-index: 1;
     position: absolute;
@@ -50,7 +48,7 @@ menu .item_link
     align-items: center;
     margin-top: 58px;
     margin-left: 30px;
-    transform: translate(-15px, -3px);
+    transform: translate(-15px, -1px);
 }
 
 
@@ -65,10 +63,11 @@ menu .icon
     cursor: pointer;
 }
 
+
 menu a:hover
 {
     color: #3ECD81;
-
+    fill: aqua;
 }
 
 menu item a

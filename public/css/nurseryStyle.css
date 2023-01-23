@@ -1,36 +1,335 @@
+@media screen and (min-width: 4000px) and (orientation: landscape)
+{ 
+    container
+    {
+        margin-left: 100px;
+        /* border: 1px solid rgb(255, 255, 255); */
+        min-width: 92%;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 4000px) and (orientation: landscape)
+{ 
+    container
+    {
+        margin-left: 100px;
+        /* border: 1px solid rgb(255, 255, 255); */
+        min-width: 70%;
+    }
+
+}
+
+
+.scorepanel
+{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.scorepanel_item
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(23, 20, 41, 1);
+    width: 20%;
+    height: 76px;
+    gap: 10px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-family: 'Poppins';
+}
+
+.scorepanel_item label
+{
+    margin-left: 30px;
+    color: rgba(62, 205, 129, 1);
+}
+
+.scorepanel_item info
+{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nurseryTable
+{
+    margin-top: 50px;
+    
+}
+
+.nurseryTable label
+{
+    font-family: 'Poppins';
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nurseryTable .statistic
+{
+    margin-top: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(23, 20, 41, 1);
+    font-family: 'Poppins';
+    height: 76px;
+    width: 440px;
+}
+
+.nurseryTable .statistic label
+{
+    margin-left: 30px;
+    color: rgba(62, 205, 129, 1);
+    font-size: 16px;
+}
+
+.nurseryTable .statistic info
+{
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+
+.nurseryTable .statistic .btn_add
+{
+    margin-left: auto;
+    margin-right: 30px;
+
+    width: 37px;
+    height: 37px;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nurseryTable .statistic .btn_add:hover
+{
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.nurseryTable table
+{
+    color: aliceblue;
+    font-family: 'Poppins';
+    font-weight: 100;
+    margin-top: 20px;
+    background-color: rgba(23, 20, 41, 1);
+    border-radius: 16px;
+    width: 100%;
+}
+
+.nurseryTable table tr th .table_th
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nurseryTable table tr th .table_th label
+{
+    color: rgba(62, 205, 129, 1);
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.nurseryTable .btn_sort
+{
+    cursor: pointer;
+}
+
+.nurseryTable .btn_sort:hover
+{
+    filter: invert(1%) sepia(8%) saturate(246%) hue-rotate(86deg) brightness(118%) contrast(1%);
+}
+
+
+.nurseryTable table tr th
+{
+    color: #3ECD81;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 16px;
+    text-align: 10px;
+    left: 20px;
+    height: 58px;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.nurseryTable table tr td
+{
+    padding-left: 30px;
+    font-size: 18px;
+    height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nurseryTable table tr td:last-child
+{
+    margin-left: 0px;
+}
+
+.nurseryTable table tr:last-child td
+{
+    border-bottom: none;
+}
+
+.nurseryTable table tr:first-child th:first-child
+{
+    border-radius: 16px 0px 0px 0px;
+}
+
+.nurseryTable table tr:first-child th:last-child
+{
+    border-radius: 0px 16px 0px 0px;
+}
+
+.nurseryTable table tr:last-child td:first-child
+{
+    border-radius: 0px 0px 0px 16px;
+}
+
+.nurseryTable table tr:last-child td:last-child
+{
+    border-radius: 0px 0px 16px 0px;
+}
+
+.nurseryTable .btn_show
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.nurseryTable .btn_show:hover
+{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
 .nurseryStyle_modal
 {
+    transition: 2s;
     display: none;
     position: fixed; /* фиксированное положение */
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.626); /* цвет фона */
-    z-index: 0;
+    background: rgba(255, 255, 255, 0.08); /* цвет фона */
+    backdrop-filter: blur(6px);
+    z-index: 1;
+    
 }
 
 .nurseryStyle_modal_container
 {
-    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(14, 12, 23, 1);
     border-radius: 20px;
-    width: 600px;
-    height: 600px;
+    width: 480px;
+    height: 650px;
+}
+
+.nurseryStyle_modal_container .btn_close
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.nurseryStyle_modal_container .btn_close:hover
+{
+    filter: invert(1%) sepia(8%) saturate(246%) hue-rotate(86deg) brightness(118%) contrast(1%);
 }
 
 .nurseryStyle_modal_container_title
 {
-    margin: 5%;
+    margin-top: 30px;
     font-size: 20px;
-    color: rgb(56, 87, 35);
-    font-family: 'Russo-one';
-    border-bottom: 1px solid rgba(0, 0, 0, 0.323);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Poppins';
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    -webkit-user-select: none;
     z-index: 1;
 }
 
-.nurseryStyle_modal.close
+.nurseryStyle_modal_form label{
+    margin-top: 30px;
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nurseryStyle_modal_form input[type=number]
 {
-    display: none;
+    margin-top: 5px;
+    max-width: 362px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: 'Poppins';
+    outline: none;
+    height: 52px;
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px rgba(255, 255, 255, 0.5) solid;
+    background-color: rgba(14, 12, 23, 1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.nurseryStyle_modal_form .btn_add_submit
+{
+    font-size: 24px;
+    font-family: 'Poppins';
+    cursor: pointer;
+    border-radius: 56px;
+    height: 62px;
+    margin-top: 34px;
+    background-color: #3ECD81;
+}
+
+.nurseryStyle_modal_form .incubation_box
+{
+    margin-top: 5px;
+    width: 362px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: 'Poppins';
+    outline: none;
+    height: 52px;
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px rgba(255, 255, 255, 0.5) solid;
+    background-color: rgba(14, 12, 23, 1);
 }
 
 .nurseryStyle_modal.open

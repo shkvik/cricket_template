@@ -5,6 +5,8 @@ const nurseryRouter = express.Router();
 
 nurseryRouter.get("/", nurseryController.index);
 
-nurseryRouter.post("/addColony", nurseryController.addColony);
+nurseryRouter.post("/addIncubationBox", nurseryController.addIncubationBox);
+
+nurseryRouter.post("/addNeonatesTrays", nurseryController.addNeonatesTrays)
 
 module.exports = nurseryRouter;

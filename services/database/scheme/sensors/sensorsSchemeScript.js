@@ -22,3 +22,5 @@ const sensors_measurements = database.provider.sequelize.define("sensors_measure
     freezeTableName: true
 });
 
+sensors.sync({ alter: true });
+sensors_measurements.sync({ alter: true });

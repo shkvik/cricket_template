@@ -5,15 +5,30 @@
 
 <a id="pageName" style="display: none;" name="nursery"> </a>
 
-<div class="nurseryStyle_modal close">
-    <div class="nurseryStyle_modal_container">
-        <div class="nurseryStyle_modal_container_title">
-            Test
-        </div>
-        <form class="nurseryStyle_modal_form" method="post" action="/nursery/addColony">
 
-            <label>Choose parent colony</label>
-            <select name="parent_colony">
+<div class="nurseryStyle_modal close" id="incubationModal">
+    <div class="nurseryStyle_modal_container">
+
+        <div class="btn_close" id="btn_close_add_incubation_box">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75383 13.9534L7.36583 7.36603M13.9778 0.778701L7.36583 7.36603M7.36583 7.36603L0.759561 0.772971M7.36583 7.36603L13.9721 13.9591" stroke="white" stroke-opacity="0.8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <div class="nurseryStyle_modal_container_title">
+            Add Incubation box 
+        </div>
+
+        <form class="nurseryStyle_modal_form" method="post" action="/nursery/addIncubationBox">
+
+            <label>Fly cage ID</label>
+            <input name="fly_cage_id" required="required" type="number" placeholder="Number of bins"/>
+
+            <label>Weight of eggs, g</label>
+            <input name="weight_of_eggs" required="required" type="number" placeholder="Number of bins"/>
+            
+            <label>Incubation box</label>
+            <select name="incubation_box" class="incubation_box">
                 <option value="">--Please choose an option--</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -23,115 +38,302 @@
                 <option value="6">6</option>
             </select>
 
-            <label>Number of bins</label>
-            <input name="number_of_bins" required="required" type="text" placeholder="Number of bins"/>
-
-            <label>Egg density (g/bin)</label>
-            <input name="egg_density" required="required" type="text" placeholder="Number of bins"/>
-
-            <label>Location</label>
-            <input name="location" required="required" type="text" placeholder="Number of bins"/>
-
-            <button type="submit"> Submit </button>
+            <button class="btn_add_submit" type="submit"> Add </button>
         </form>
         
     </div>
 </div>
 
-<div class="content">
-    <div class="nersery_header_container">
 
-        <button class="nersery_btn_add_colony"> Add Colony</button>
+<div class="nurseryStyle_modal close" id="neonatesModal">
+    <div class="nurseryStyle_modal_container" style="height: 700px;">
 
-        <div class="meta_info_quantity">
-            <div class="meta_info_label">
-                Quantity of colonies
-            </div>
-            <div class="meta_info_circle">
-                5
-            </div>
+        <div class="btn_close" id="btn_close_add_neonates_tray">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75383 13.9534L7.36583 7.36603M13.9778 0.778701L7.36583 7.36603M7.36583 7.36603L0.759561 0.772971M7.36583 7.36603L13.9721 13.9591" stroke="white" stroke-opacity="0.8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </div>
 
-         <div class="meta_info_transferred">
-            <div class="meta_info_label">
-                To be transferred today
-            </div>
-            <div class="meta_info_circle">
-                6
-            </div>
+        <div class="nurseryStyle_modal_container_title">
+            Add Neonates tray 
         </div>
 
-        <select id="selectID" class="nersery_dropdown_list_sort">
-            <option>N</option>
-            <option value=”GR”>Green</option>
-            <option value=”YE”>Yellow</option>
-            <option value=”BL”>Black</option>
-        </select>
+        <form class="nurseryStyle_modal_form" method="post" action="/nursery/addNeonatesTrays">
+            <label>Incubation box ID</label>
+            <input name="ncubation_box_id" required="required" type="number" placeholder="Number of bins"/>
 
-    </div>
-    
-    <table class="table">
-        <thead>
-            <tr>
-                <th>start</th>
-                <th>id</th>
-                <th>harvest</th>
-                <th>stage</th>
-                <th>trays</th>
-                <th>location</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{!-- <a href="colonyCart/1" class="rowlink"></a> --}}
-            <tr onclick="location.href='colonyCart/1';">
-                <td></a>14.01.23</td>
-                <td>1</td>
-                <td>30.01.23</td>
-                <td>incubation</td>
-                <td>4</td>
-                <td>11</td>
-            </tr>
-            <tr onclick="location.href='colonyCart/1';">
-                <td>14.01.23</td>
-                <td>1</td>
-                <td>30.01.23</td>
-                <td>incubation</td>
-                <td>4</td>
-                <td>11</td>
-            </tr>
-            <tr onclick="location.href='colonyCart/1';">
-                <td>14.01.23</td>
-                <td>1</td>
-                <td>30.01.23</td>
-                <td>incubation</td>
-                <td>4</td>
-                <td>11</td>
-            </tr>
-            <tr onclick="location.href='colonyCart/1';">
-                <td></a>14.01.23</td>
-                <td>1</td>
-                <td>30.01.23</td>
-                <td>incubation</td>
-                <td>4</td>
-                <td>11</td>
-            </tr>
-            <tr onclick="location.href='colonyCart/1';">
-                <td></a>14.01.23</td>
-                <td>1</td>
-                <td>30.01.23</td>
-                <td>incubation</td>
-                <td>4</td>
-                <td>11</td>
-            </tr>
-            <tr onclick="location.href='colonyCart/1';">
-                <td>14.01.23</td>
-                <td>1</td>
-                <td>30.01.23</td>
-                <td>incubation</td>
-                <td>4</td>
-                <td>11</td>
-            </tr>
+            <label>Colony ID</label>
+            <input name="colony_id" required="required" type="number" placeholder="Number of bins"/>
+
+            <label>Weight of neonates, g</label>
+            <input name="weight_of_neonates" required="required" type="number" placeholder="Number of bins"/>
             
-        </tbody>
-    </table>
+            <label>Neonates tray</label>
+            <select name="incubation_box" class="incubation_box">
+                <option value="">--Please choose an option--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+            <button class="btn_add_submit" type="submit"> Add </button>
+        </form>
+        
+    </div>
 </div>
+
+
+<container>
+    <div class="scorepanel">
+        <div class="scorepanel_item">
+            <label> Temperature: </label>
+            <info> 5° </info>
+        </div>
+
+        <div class="scorepanel_item">
+            <label> Humidity: </label>
+            <info> 5% </info>
+        </div>
+        <div class="scorepanel_item">
+            <label> CO2: </label>
+            <info> 5ppm </info>
+        </div>
+        <div class="scorepanel_item">
+            <label> NH3: </label>
+            <info> 5mg/m3 </info>
+        </div>
+    </div>
+
+    <div class="nurseryTable">
+        <label> Phase 1: Incubation </label>
+        <div class="statistic">
+            <label> Incubation boxes: </label>
+            <info> 33 </info>
+            <div class="btn_add" id="btn_add_incubation_box">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.24 6.74H6.2V10.88H4.08V6.74H0.0400001V4.82H4.08V0.679999H6.2V4.82H10.24V6.74Z" fill="white" fill-opacity="0.8"/>
+                </svg>
+            </div>
+        </div>
+        
+        <table cellspacing="0">
+            <tr>
+                <th>
+                    <div class="table_th">
+                        <label> ID </label>
+                        <div class="btn_sort">
+                            <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 0L8.39712 4.5L0.602886 4.5L4.5 0Z" fill="white" fill-opacity="0.3"/>
+                                <path d="M4.5 12L0.602885 7.5L8.39711 7.5L4.5 12Z" fill="white" fill-opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="table_th">
+                        <label> Age </label>
+                        <div class="btn_sort">
+                            <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 0L8.39712 4.5L0.602886 4.5L4.5 0Z" fill="white" fill-opacity="0.3"/>
+                                <path d="M4.5 12L0.602885 7.5L8.39711 7.5L4.5 12Z" fill="white" fill-opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="table_th">
+                        <label> Start </label>
+                        <div class="btn_sort">
+                            <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 0L8.39712 4.5L0.602886 4.5L4.5 0Z" fill="white" fill-opacity="0.3"/>
+                                <path d="M4.5 12L0.602885 7.5L8.39711 7.5L4.5 12Z" fill="white" fill-opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="table_th">
+                        <label> Collection </label>
+                        <div class="btn_sort">
+                            <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 0L8.39712 4.5L0.602886 4.5L4.5 0Z" fill="white" fill-opacity="0.3"/>
+                                <path d="M4.5 12L0.602885 7.5L8.39711 7.5L4.5 12Z" fill="white" fill-opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td>#665</td>
+                <td>1</td>
+                <td>14.01.23</td>
+                <td>19.01.23</td>
+                <td>
+                    <div class="btn_show">
+                        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.0635 5.38572L1.0648 5.38396C3.57756 2.00354 6.82016 0.25 10.0489 0.25C13.847 0.25 17.1338 2.57438 19.079 5.39411L19.0798 5.39521C19.1912 5.55778 19.25 5.7462 19.25 5.93805C19.25 6.1296 19.1912 6.31809 19.0801 6.48048C17.1372 9.33545 13.8725 11.625 10.0489 11.625C6.18441 11.625 2.98296 9.34032 1.0446 6.49321C0.930583 6.32704 0.871947 6.13378 0.875122 5.93764C0.878306 5.741 0.943492 5.54894 1.0635 5.38572ZM10.0489 1.0864C7.20177 1.0864 4.21159 2.6326 1.81701 5.85154C1.77435 5.9089 1.77144 5.98753 1.81283 6.04833C3.64565 8.74099 6.59513 10.7886 10.0489 10.7886C13.4643 10.7886 16.4765 8.73299 18.3119 6.03558L18.3129 6.03409C18.3222 6.02049 18.3294 6.00562 18.3343 5.98996L18.3351 5.98719C18.3422 5.96469 18.3443 5.941 18.3414 5.91764L18.3412 5.91642C18.3392 5.90042 18.3349 5.88478 18.3283 5.87L18.3277 5.86856C18.3235 5.85909 18.3184 5.85003 18.3125 5.84148C16.471 3.17277 13.435 1.0864 10.0489 1.0864Z" fill="white" fill-opacity="0.7"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0626 8.44673C11.4721 8.44673 12.6147 7.32332 12.6147 5.93754C12.6147 4.55175 11.4721 3.42834 10.0626 3.42834C8.6531 3.42834 7.5105 4.55175 7.5105 5.93754C7.5105 7.32332 8.6531 8.44673 10.0626 8.44673ZM10.0626 7.61033C11.0022 7.61033 11.764 6.86139 11.764 5.93754C11.764 5.01368 11.0022 4.26474 10.0626 4.26474C9.12293 4.26474 8.36119 5.01368 8.36119 5.93754C8.36119 6.86139 9.12293 7.61033 10.0626 7.61033Z" fill="white" fill-opacity="0.7"/>
+                        </svg>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>#665</td>
+                <td>2</td>
+                <td>14.01.23</td>
+                <td>19.01.23</td>
+                <td>
+                    <div class="btn_show">
+                        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.0635 5.38572L1.0648 5.38396C3.57756 2.00354 6.82016 0.25 10.0489 0.25C13.847 0.25 17.1338 2.57438 19.079 5.39411L19.0798 5.39521C19.1912 5.55778 19.25 5.7462 19.25 5.93805C19.25 6.1296 19.1912 6.31809 19.0801 6.48048C17.1372 9.33545 13.8725 11.625 10.0489 11.625C6.18441 11.625 2.98296 9.34032 1.0446 6.49321C0.930583 6.32704 0.871947 6.13378 0.875122 5.93764C0.878306 5.741 0.943492 5.54894 1.0635 5.38572ZM10.0489 1.0864C7.20177 1.0864 4.21159 2.6326 1.81701 5.85154C1.77435 5.9089 1.77144 5.98753 1.81283 6.04833C3.64565 8.74099 6.59513 10.7886 10.0489 10.7886C13.4643 10.7886 16.4765 8.73299 18.3119 6.03558L18.3129 6.03409C18.3222 6.02049 18.3294 6.00562 18.3343 5.98996L18.3351 5.98719C18.3422 5.96469 18.3443 5.941 18.3414 5.91764L18.3412 5.91642C18.3392 5.90042 18.3349 5.88478 18.3283 5.87L18.3277 5.86856C18.3235 5.85909 18.3184 5.85003 18.3125 5.84148C16.471 3.17277 13.435 1.0864 10.0489 1.0864Z" fill="white" fill-opacity="0.7"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0626 8.44673C11.4721 8.44673 12.6147 7.32332 12.6147 5.93754C12.6147 4.55175 11.4721 3.42834 10.0626 3.42834C8.6531 3.42834 7.5105 4.55175 7.5105 5.93754C7.5105 7.32332 8.6531 8.44673 10.0626 8.44673ZM10.0626 7.61033C11.0022 7.61033 11.764 6.86139 11.764 5.93754C11.764 5.01368 11.0022 4.26474 10.0626 4.26474C9.12293 4.26474 8.36119 5.01368 8.36119 5.93754C8.36119 6.86139 9.12293 7.61033 10.0626 7.61033Z" fill="white" fill-opacity="0.7"/>
+                        </svg>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>#665</td>
+                <td>3</td>
+                <td>14.01.23</td>
+                <td>19.01.23</td>
+                <td>
+                    <div class="btn_show">
+                        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.0635 5.38572L1.0648 5.38396C3.57756 2.00354 6.82016 0.25 10.0489 0.25C13.847 0.25 17.1338 2.57438 19.079 5.39411L19.0798 5.39521C19.1912 5.55778 19.25 5.7462 19.25 5.93805C19.25 6.1296 19.1912 6.31809 19.0801 6.48048C17.1372 9.33545 13.8725 11.625 10.0489 11.625C6.18441 11.625 2.98296 9.34032 1.0446 6.49321C0.930583 6.32704 0.871947 6.13378 0.875122 5.93764C0.878306 5.741 0.943492 5.54894 1.0635 5.38572ZM10.0489 1.0864C7.20177 1.0864 4.21159 2.6326 1.81701 5.85154C1.77435 5.9089 1.77144 5.98753 1.81283 6.04833C3.64565 8.74099 6.59513 10.7886 10.0489 10.7886C13.4643 10.7886 16.4765 8.73299 18.3119 6.03558L18.3129 6.03409C18.3222 6.02049 18.3294 6.00562 18.3343 5.98996L18.3351 5.98719C18.3422 5.96469 18.3443 5.941 18.3414 5.91764L18.3412 5.91642C18.3392 5.90042 18.3349 5.88478 18.3283 5.87L18.3277 5.86856C18.3235 5.85909 18.3184 5.85003 18.3125 5.84148C16.471 3.17277 13.435 1.0864 10.0489 1.0864Z" fill="white" fill-opacity="0.7"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0626 8.44673C11.4721 8.44673 12.6147 7.32332 12.6147 5.93754C12.6147 4.55175 11.4721 3.42834 10.0626 3.42834C8.6531 3.42834 7.5105 4.55175 7.5105 5.93754C7.5105 7.32332 8.6531 8.44673 10.0626 8.44673ZM10.0626 7.61033C11.0022 7.61033 11.764 6.86139 11.764 5.93754C11.764 5.01368 11.0022 4.26474 10.0626 4.26474C9.12293 4.26474 8.36119 5.01368 8.36119 5.93754C8.36119 6.86139 9.12293 7.61033 10.0626 7.61033Z" fill="white" fill-opacity="0.7"/>
+                        </svg>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>#665</td>
+                <td>4</td>
+                <td>14.01.23</td>
+                <td>19.01.23</td>
+                <td>
+                    <div class="btn_show">
+                        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.0635 5.38572L1.0648 5.38396C3.57756 2.00354 6.82016 0.25 10.0489 0.25C13.847 0.25 17.1338 2.57438 19.079 5.39411L19.0798 5.39521C19.1912 5.55778 19.25 5.7462 19.25 5.93805C19.25 6.1296 19.1912 6.31809 19.0801 6.48048C17.1372 9.33545 13.8725 11.625 10.0489 11.625C6.18441 11.625 2.98296 9.34032 1.0446 6.49321C0.930583 6.32704 0.871947 6.13378 0.875122 5.93764C0.878306 5.741 0.943492 5.54894 1.0635 5.38572ZM10.0489 1.0864C7.20177 1.0864 4.21159 2.6326 1.81701 5.85154C1.77435 5.9089 1.77144 5.98753 1.81283 6.04833C3.64565 8.74099 6.59513 10.7886 10.0489 10.7886C13.4643 10.7886 16.4765 8.73299 18.3119 6.03558L18.3129 6.03409C18.3222 6.02049 18.3294 6.00562 18.3343 5.98996L18.3351 5.98719C18.3422 5.96469 18.3443 5.941 18.3414 5.91764L18.3412 5.91642C18.3392 5.90042 18.3349 5.88478 18.3283 5.87L18.3277 5.86856C18.3235 5.85909 18.3184 5.85003 18.3125 5.84148C16.471 3.17277 13.435 1.0864 10.0489 1.0864Z" fill="white" fill-opacity="0.7"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0626 8.44673C11.4721 8.44673 12.6147 7.32332 12.6147 5.93754C12.6147 4.55175 11.4721 3.42834 10.0626 3.42834C8.6531 3.42834 7.5105 4.55175 7.5105 5.93754C7.5105 7.32332 8.6531 8.44673 10.0626 8.44673ZM10.0626 7.61033C11.0022 7.61033 11.764 6.86139 11.764 5.93754C11.764 5.01368 11.0022 4.26474 10.0626 4.26474C9.12293 4.26474 8.36119 5.01368 8.36119 5.93754C8.36119 6.86139 9.12293 7.61033 10.0626 7.61033Z" fill="white" fill-opacity="0.7"/>
+                        </svg>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="nurseryTable">
+        <label> Phase 2: Neonates </label>
+        <div class="statistic">
+            <label> Neonates trays: </label>
+            <info> 33 </info>
+            <div class="btn_add" id="btn_add_neonates_trays">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.24 6.74H6.2V10.88H4.08V6.74H0.0400001V4.82H4.08V0.679999H6.2V4.82H10.24V6.74Z" fill="white" fill-opacity="0.8"/>
+                </svg>
+            </div>
+        </div>
+        
+        <table cellspacing="0">
+            <tr>
+                <th>
+                    <div class="table_th">
+                        <label> ID </label>
+                        <div class="btn_sort">
+                            <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 0L8.39712 4.5L0.602886 4.5L4.5 0Z" fill="white" fill-opacity="0.3"/>
+                                <path d="M4.5 12L0.602885 7.5L8.39711 7.5L4.5 12Z" fill="white" fill-opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="table_th">
+                        <label> Colony ID </label>
+                        <div class="btn_sort">
+                            <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 0L8.39712 4.5L0.602886 4.5L4.5 0Z" fill="white" fill-opacity="0.3"/>
+                                <path d="M4.5 12L0.602885 7.5L8.39711 7.5L4.5 12Z" fill="white" fill-opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="table_th">
+                        <label> Age </label>
+                        <div class="btn_sort">
+                            <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 0L8.39712 4.5L0.602886 4.5L4.5 0Z" fill="white" fill-opacity="0.3"/>
+                                <path d="M4.5 12L0.602885 7.5L8.39711 7.5L4.5 12Z" fill="white" fill-opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="table_th">
+                        <label> Start </label>
+                        <div class="btn_sort">
+                            <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 0L8.39712 4.5L0.602886 4.5L4.5 0Z" fill="white" fill-opacity="0.3"/>
+                                <path d="M4.5 12L0.602885 7.5L8.39711 7.5L4.5 12Z" fill="white" fill-opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="table_th">
+                        <label> Collection </label>
+                        <div class="btn_sort">
+                            <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.5 0L8.39712 4.5L0.602886 4.5L4.5 0Z" fill="white" fill-opacity="0.3"/>
+                                <path d="M4.5 12L0.602885 7.5L8.39711 7.5L4.5 12Z" fill="white" fill-opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+
+            <tr>
+                <td>#665</td>
+                <td>#665</td>
+                <td>1</td>
+                <td>14.01.23</td>
+                <td>19.01.23</td>
+            </tr>
+
+            <tr>
+                <td>#665</td>
+                <td>#665</td>
+                <td>2</td>
+                <td>14.01.23</td>
+                <td>19.01.23</td>
+            </tr>
+
+            <tr>
+                <td>#665</td>
+                <td>#665</td>
+                <td>3</td>
+                <td>14.01.23</td>
+                <td>19.01.23</td>
+            </tr>
+
+            <tr>
+                <td>#665</td>
+                <td>#665</td>
+                <td>4</td>
+                <td>14.01.23</td>
+                <td>19.01.23</td>
+            </tr>
+        </table>
+    </div>
+</container>
