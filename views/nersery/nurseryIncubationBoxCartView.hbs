@@ -1,8 +1,76 @@
 <link rel="stylesheet" type="text/css" href="/css/nursery/incubationBoxStyle.css">
+<script type="module" src="/javascript/nursery/nurseryIncubationCartScript.js"></script>
+
 
 <a id="pageName" style="display: none;" name="nursery"> </a>
 
+
+
+<div class="incubationBoxModal" id="incubationBoxModal_hatching">
+    <div class="container hatching">
+
+        <div class="btn_close" id="btn_close_hatching">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75383 13.9534L7.36583 7.36603M13.9778 0.778701L7.36583 7.36603M7.36583 7.36603L0.759561 0.772971M7.36583 7.36603L13.9721 13.9591" stroke="white" stroke-opacity="0.8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <div class="title">
+            Hatching
+        </div>
+
+        <form method="post" action="/nursery/incubationBox/{{{this.incubation_box_cart_id}}}/hatching">
+
+            <label>% of hatching</label>
+            <input name="prcnt_of_hatching" required="required" type="number" placeholder="Number of bins"/>
+
+            <label>Neonates count</label>
+            <input name="neonates_count" required="required" type="number" placeholder="Number of bins"/>
+            
+            <label>Neonates weight, g</label>
+            <input name="neonates_weight" required="required" type="number" placeholder="Number of bins"/>
+
+            <button class="btn_add_submit" type="submit"> Collect </button>
+        </form>
+        
+    </div>
+</div>
+
+<div class="incubationBoxModal" id="incubationBoxModal_place">
+    <div class="container hatching">
+
+        <div class="btn_close" id="btn_close_place">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75383 13.9534L7.36583 7.36603M13.9778 0.778701L7.36583 7.36603M7.36583 7.36603L0.759561 0.772971M7.36583 7.36603L13.9721 13.9591" stroke="white" stroke-opacity="0.8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <div class="title">
+            Place
+        </div>
+
+        <form method="post" action="/nursery/incubationBox/{{{this.incubation_box_cart_id}}}/place">
+
+            <label>Neonates tray</label>
+            <input name="prcnt_of_hatching" required="required" type="number" placeholder="Number of bins"/>
+
+            <label>Neonates weight, g</label>
+            <input name="neonates_count" required="required" type="number" placeholder="Number of bins"/>
+            
+            <label>Colony ID</label>
+            <input name="neonates_weight" required="required" type="number" placeholder="Number of bins"/>
+
+            <button class="btn_add_submit" type="submit"> Place </button>
+        </form>
+        
+    </div>
+</div>
+
 <container>
+
+
+
+    
     <div class="inc_box_btn_back_box" onclick="location.href='/nursery';">
         <img src="/img/nursery/incubation_box/btn_back.svg">
         <label>Back</label>
@@ -65,7 +133,7 @@
         </div>
     </div>
     <div class="inc_box_hatching_btn_box">
-        <button> Hatching </button>
-        <button> Place </button>
+        <button id="btn_hatching"> Hatching </button>
+        <button id="btn_place"> Place </button>
     </div>
 </container>

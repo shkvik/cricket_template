@@ -275,7 +275,6 @@
     background: rgba(255, 255, 255, 0.08); /* цвет фона */
     backdrop-filter: blur(6px);
     z-index: 1;
-    
 }
 
 .nurseryStyle_modal_container
@@ -386,9 +385,4 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.input_a
-{
-    
 }

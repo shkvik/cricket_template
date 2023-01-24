@@ -232,10 +232,127 @@
     background-color: rgba(100, 225, 149, 1);
 }
 
-.input_a
+.incubationBoxModal
 {
-    width: 20px;
-    height: 20px;
-    color: green;
+    transition: 2s;
+    display: none;
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.08); /* цвет фона */
+    backdrop-filter: blur(6px);
+    z-index: 1;
+}
+
+.incubationBoxModal .container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(14, 12, 23, 1);
+    border-radius: 20px;
+    width: 480px;
+    height: 650px;
+}
+
+.incubationBoxModal .container.hatching
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(14, 12, 23, 1);
+    border-radius: 20px;
+    width: 480px;
+    height: 650px;
+}
+
+.incubationBoxModal .container .btn_close
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: auto;
     cursor: pointer;
 }
+
+
+.incubationBoxModal .container .title
+{
+    margin-top: 30px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Poppins';
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    -webkit-user-select: none;
+    z-index: 1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.incubationBoxModal .container form
+{
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.incubationBoxModal .container form label{
+    margin-top: 30px;
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.incubationBoxModal .container form input[type=number]
+{
+    margin-top: 5px;
+    width: 362px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: 'Poppins';
+    outline: none;
+    height: 52px;
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px rgba(255, 255, 255, 0.5) solid;
+    background-color: rgba(14, 12, 23, 1);
+}
+
+.incubationBoxModal .container .btn_add_submit
+{
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Poppins';
+    cursor: pointer;
+    border-radius: 56px;
+    height: 62px;
+    margin-top: 34px;
+    background-color: #3ECD81;
+}
+
+.incubationBoxModal .container .btn_close:hover
+{
+    filter: invert(1%) sepia(8%) saturate(246%) hue-rotate(86deg) brightness(118%) contrast(1%);
+}
+
+.incubationBoxModal.open
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+

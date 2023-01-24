@@ -31,5 +31,34 @@ exports.add_incubation_box = async function(request, response)
 
 exports.get_cart_incubation_box = async function(request, response)
 {
-    response.render('../views/nersery/nurseryIncubationBoxCartView.hbs');
+    console.log(request.params.id);
+
+    const modelView = {
+        incubation_box_cart_id: request.params.id
+    };
+
+    response.render('../views/nersery/nurseryIncubationBoxCartView.hbs', modelView);
 };
+
+
+exports.place_incubation_box = async function(request, response)
+{
+    console.log(
+    {
+        params: request.params.id
+    });
+
+    response.redirect(`/nursery/incubationBox/${request.params.id}`); 
+};
+
+
+exports.hatching_incubation_box = async function (request, response) 
+{
+
+    console.log(
+    {
+        params: request.params.id
+    });
+
+    response.redirect(`/nursery/incubationBox/${request.params.id}`); 
+}
